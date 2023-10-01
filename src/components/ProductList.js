@@ -1,11 +1,11 @@
-import product1 from "src/assests/1.png";
-import product2 from "src/assests/2.jpg";
-import product3 from "src/assests/3.png";
-import product4 from "src/assests/4.jpg";
-import product5 from "src/assests/5.png";
-import product6 from "src/assests/6.jpg";
-import product7 from "src/assests/7.jpg";
-import product8 from "src/assests/8.jpg";
+import product1 from "/src/assests/1.png";
+import product2 from "/src/assests/2.jpg";
+import product3 from "/src/assests/3.png";
+import product4 from "/src/assests/4.jpg";
+import product5 from "/src/assests/5.png";
+import product6 from "/src/assests/6.jpg";
+import product7 from "/src/assests/7.jpg";
+import product8 from "/src/assests/8.jpg";
 
 export const PRODUCTS = [
   {
@@ -16,7 +16,7 @@ export const PRODUCTS = [
   },
   {
     id: 2,
-    productName: "Macbook Pro 2022 (M1)",
+    productName: "Macbook Pro (M1)",
     price: 1999.0,
     productImage: product2,
   },
