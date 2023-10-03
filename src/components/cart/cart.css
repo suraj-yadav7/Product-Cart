@@ -25,8 +25,23 @@
   font-size: 30px;
 }
 
+.countHandler{
+  display: flex;
+  flex-direction:row;
+  gap:5px;
+}
+.countHandler button{
+  width:40px;
+  color:white;
+  background-color:black;
+  &:hover{
+    color:black;
+    background-color:white;
+    cursor:pointer;
+  }
+}
 .countHandler input {
-  width: 40px;
+  width: 50px;
   text-align: center;
   font-weight: bolder;
 }

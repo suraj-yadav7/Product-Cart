@@ -4,7 +4,7 @@ import { ShopContext } from "/src/components/context/shopContext.jsx";
 
 const Product = ({ data }) => {
   const { id, productImage, productName, price } = data
-  const { addToCart } = useContext(ShopContext)
+  const { addToCart,cartItems } = useContext(ShopContext)
 
   return (
     <div className="product" >
@@ -12,7 +12,7 @@ const Product = ({ data }) => {
       <div className="description">
         <p><b>{productName}</b></p>
         <p>₹ {price}</p>
-        <button className="addToCartBttn" onClick={() => addToCart(id)} >Add to cart</button>
+        <button className="addToCartBttn" onClick={() => addToCart(id)} >Add to cart {cartItems[id]}</button>
       </div>
     </div >
   )

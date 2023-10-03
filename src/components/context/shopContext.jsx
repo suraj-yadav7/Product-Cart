@@ -25,7 +25,26 @@ export const ShopContextProvider = ({ children }) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }))
   }
 
-  const contextValue = { cartItems, addToCart, removeFromCart }
+  const updateChanges = (noOfItmes, itemId) => {
+    setCartItems((prev) => ({ ...prev, [itemId]: noOfItmes }))
+  }
+
+  const cartTotal = () => {
+    let totalAmount = 0;
+    let eachItemTotal = 0
+    for (let items in cartItems) {
+      if (cartItems[items] > 0) {
+        let units = PRODUCTS.find((elem) => elem.id === Number(items));
+        eachItemTotal += cartItems[items] * units.price
+      }
+    }
+    totalAmount = totalAmount + eachItemTotal
+    return totalAmount;
+  }
+
+
+
+  const contextValue = { cartItems, addToCart, removeFromCart, updateChanges, cartTotal }
 
   console.log("the cartItem", cartItems)
 
